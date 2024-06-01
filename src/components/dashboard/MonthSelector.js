@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function MonthSelector() {
-  return <div>
+  return <div className="">
     <select>
       <option value="1">Styczeń</option>
       <option value="2">Luty</option>
