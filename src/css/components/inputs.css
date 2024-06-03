@@ -1,0 +1,14 @@
+.select,
+.input {
+    @apply flex w-full pl-2 pr-4 py-2 border rounded border-slate-400 bg-white;
+}
+
+.select {
+    option {
+        @apply px-2;
+    }
+}
+
+.label {
+    @apply text-sm text-teal-950;
+}

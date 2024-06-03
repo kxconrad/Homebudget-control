@@ -2,7 +2,7 @@ import React from "react";
 import { baseData } from "../../utils/data/baseData";
 
 
-export default function DefiniedSelector({ dataType }) {
+export default function DefiniedSelector({ dataType, extraClassess }) {
 
   const getData = (dataType) => {
     switch (dataType) {
@@ -17,8 +17,8 @@ export default function DefiniedSelector({ dataType }) {
 
   const dataArray = getData(dataType);
 
-  return <div>
-    <select className="month-select">
+  return <div className={extraClassess}>
+    <select className="select">
       {dataArray.map((item, index) => <option key={index} value={item.number}>{item.name}</option>)}
     </select>
   </div>;

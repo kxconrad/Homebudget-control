@@ -1,6 +1,6 @@
 import React from "react";
 import ReactModal from "react-modal";
-import DefiniedSelector from "../dashboard/DefiniedSelector";
+import NewPositionForm from "../NewPositionForm";
 
 export default function NewPositionModal(props) {
 
@@ -8,7 +8,6 @@ export default function NewPositionModal(props) {
 
   return (
     <ReactModal
-
       isOpen={
         props.isOpen
         /* Boolean describing if the modal should be shown or not. */}
@@ -21,20 +20,19 @@ export default function NewPositionModal(props) {
             left: 0,
             right: 0,
             bottom: 0,
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "20%",
             backgroundColor: "rgba(89, 89, 89, 0.75)"
           }, content: {
             position: "absolute",
-            top: "40px",
-            left: "40px",
-            right: "40px",
-            bottom: "40px",
             border: "1px solid #ccc",
             background: "#fff",
             overflow: "auto",
             WebkitOverflowScrolling: "touch",
             borderRadius: "4px",
             outline: "none",
-            padding: "20px"
+            padding: "40px"
           }
         }
         /* Object indicating styles to be used for the modal.
@@ -156,12 +154,7 @@ export default function NewPositionModal(props) {
         (props, children) => <div {...props}>{children}</div>
         /* Custom Content element. */}
     >
-      <h1>Dodaj nowy koszt</h1>
-      <form className="form-input">
-        <input type="input" name="cost" />
-        <DefiniedSelector />
-      </form>
-      <p>Dodaj nowy koszt</p>
+      <NewPositionForm />
     </ReactModal>
   );
 }

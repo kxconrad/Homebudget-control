@@ -36,7 +36,7 @@ export default function Navigation({ routing }) {
                 onClick={() => {
                   openNewPositionModal();
                 }}
-                className="bg-sky-500 hover:bg-sky-400 rounded px-2 py-2 whitespace-nowrap text-white min-w-[200px]">Dodaj
+                className="btn btn-primary">Dodaj
           koszt
         </button>
         <NewPositionModal isOpen={showModal} handleClose={closeOpenNewPositionModal} />
