@@ -1,10 +1,10 @@
 import React from "react";
-import MonthSelector from "./MonthSelector";
+import DefiniedSelector from "./DefiniedSelector";
 import Counters from "./Counters";
 
 export default function Dashboard() {
   return <div className="w-full px-5">
-    <MonthSelector />
+    <DefiniedSelector dataType="months" />
     <Counters />
   </div>;
 }
