@@ -1,21 +1,18 @@
 export const costReducer = (monthCosts, action) => {
-  switch (action.type) {
-    case "added": {
-
-      const newState = [
-        ...monthCosts,
-        {
-          id: action.id,
-          month: action.month,
-          value: action.value,
-          category: action.category
+    switch (action.type) {
+        case 'added': {
+            const newState = [
+                ...monthCosts,
+                {
+                    id: action.id,
+                    month: action.month,
+                    value: action.value,
+                    category: action.category
+                }
+            ];
+            return newState;
         }
-      ];
-
-      console.log("added dispatched, newState: ", newState);
-      return newState;
+        default:
+            throw Error('Unknown action: ' + action.type);
     }
-    default:
-      throw Error("Unknown action: " + action.type);
-  }
 };

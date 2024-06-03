@@ -2,6 +2,7 @@ import React from "react";
 import ReactModal from "react-modal";
 import NewPositionForm from "../NewPositionForm";
 
+
 export default function NewPositionModal(props) {
 
   ReactModal.setAppElement("#root");
@@ -23,7 +24,7 @@ export default function NewPositionModal(props) {
             display: "flex",
             justifyContent: "center",
             paddingTop: "20%",
-            backgroundColor: "rgba(89, 89, 89, 0.75)"
+            backgroundColor: "rgba(89, 89, 89, 0.75)",
           }, content: {
             position: "absolute",
             border: "1px solid #ccc",
@@ -32,8 +33,8 @@ export default function NewPositionModal(props) {
             WebkitOverflowScrolling: "touch",
             borderRadius: "4px",
             outline: "none",
-            padding: "40px"
-          }
+            padding: "40px",
+          },
         }
         /* Object indicating styles to be used for the modal.
            It has two keys, `overlay` and `content`.
@@ -120,7 +121,7 @@ export default function NewPositionModal(props) {
       aria={
         {
           labelledby: "heading",
-          describedby: "full_description"
+          describedby: "full_description",
         }
         /* Additional aria attributes (optional). */}
 

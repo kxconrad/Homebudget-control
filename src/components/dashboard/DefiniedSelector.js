@@ -1,14 +1,13 @@
-import React from "react";
-import { baseData } from "../../utils/data/baseData";
-
+import React from 'react';
+import { baseData } from '../../utils/data/baseData';
 
 export default function DefiniedSelector({ dataType, stateValue, stateOnChange }) {
-
+    
   const getData = (dataType) => {
     switch (dataType) {
-      case "months":
+      case 'months':
         return baseData.months;
-      case "categories":
+      case 'categories':
         return baseData.categories;
       default:
         return baseData.months;

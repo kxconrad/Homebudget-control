@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
-import { CostsContext } from "../../contexts/CostsContext";
+import React, { useContext } from 'react';
+import { CostsContext } from '../../contexts/CostsContext';
 
 export default function Counters() {
-
   const costs = useContext(CostsContext);
-
-  console.log("costs in counters: ", costs);
 
   return (<div className="w-full mt-5 flex justify-around">
     <div className="flex flex-col items-center">

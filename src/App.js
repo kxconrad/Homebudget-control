@@ -1,9 +1,8 @@
-import Navigation from "./components/Navigation";
-import { routing } from "./utils/data/routing";
-import { CostsProvider } from "./contexts/CostsProvider";
+import Navigation from './components/Navigation';
+import { routing } from './utils/data/routing';
+import { CostsProvider } from './contexts/CostsProvider';
 
 function App() {
-
   return (
     <CostsProvider>
       <div className="min-h-screen flex flex-col items-center">

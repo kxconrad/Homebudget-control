@@ -1,6 +1,6 @@
-import React from "react";
-import DefiniedSelector from "./DefiniedSelector";
-import Counters from "./Counters";
+import React from 'react';
+import DefiniedSelector from './DefiniedSelector';
+import Counters from './Counters';
 
 export default function Dashboard() {
   return <div className="w-full px-5">
