@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CostsContext } from "../../contexts/CostsContext";
 
 export default function Counters() {
-  return <div className="w-full mt-5 flex justify-around">
+
+  const costs = useContext(CostsContext);
+
+  console.log("costs in counters: ", costs);
+
+  return (<div className="w-full mt-5 flex justify-around">
     <div className="flex flex-col items-center">
       <h1>Liczba kosztów:</h1>
       <div className="h-[150px] w-[150px] bg-slate-300 rounded-full flex justify-center items-center">
-        <span className="text-3xl">0</span>
+        <span className="text-3xl">
+          {
+            costs.length ? costs.length : 0
+          }
+        </span>
       </div>
     </div>
 
@@ -22,6 +32,5 @@ export default function Counters() {
         <span className="text-3xl">0</span>
       </div>
     </div>
-
-  </div>;
+  </div>);
 }

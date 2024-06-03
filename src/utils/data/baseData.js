@@ -1,51 +1,51 @@
 export const baseData = {
   months: [
     {
-      number: 1,
+      value: 1,
       name: "Styczeń"
     },
     {
-      number: 2,
+      value: 2,
       name: "Luty"
     },
     {
-      number: 3,
+      value: 3,
       name: "Marzec"
     },
     {
-      number: 4,
+      value: 4,
       name: "Kwiecień"
     },
     {
-      number: 5,
+      value: 5,
       name: "Maj"
     },
     {
-      number: 6,
+      value: 6,
       name: "Czerwiec"
     },
     {
-      number: 7,
+      value: 7,
       name: "Lipiec"
     },
     {
-      number: 8,
+      value: 8,
       name: "Sierpień"
     },
     {
-      number: 9,
+      value: 9,
       name: "Wrzesień"
     },
     {
-      number: 10,
+      value: 10,
       name: "Październik"
     },
     {
-      number: 11,
+      value: 11,
       name: "Listopad"
     },
     {
-      number: 12,
+      value: 12,
       name: "Grudzień"
     }
   ],
