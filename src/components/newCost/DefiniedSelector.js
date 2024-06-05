@@ -1,8 +1,8 @@
 import React from 'react';
 import { baseData } from '../../utils/data/baseData';
 
-export default function DefiniedSelector({ dataType, stateValue, stateOnChange }) {
-    
+export default function DefiniedSelector({ dataType, stateValue, stateOnChange = null }) {
+
   const getData = (dataType) => {
     switch (dataType) {
       case 'months':
@@ -17,7 +17,8 @@ export default function DefiniedSelector({ dataType, stateValue, stateOnChange }
   const dataArray = getData(dataType);
 
   return <div>
-    <select className="select" value={stateValue} onChange={(e) => stateOnChange(e.target.value)}>
+    <select className="select" value={stateValue}
+            onChange={(e) => stateOnChange(e.target.value)}>
       {dataArray.map((item, index) => <option key={index} value={item.value}>{item.name}</option>)}
     </select>
   </div>;

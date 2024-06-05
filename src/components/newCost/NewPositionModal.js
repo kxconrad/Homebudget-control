@@ -1,11 +1,10 @@
-import React from "react";
-import ReactModal from "react-modal";
-import NewPositionForm from "../NewPositionForm";
-
+import React from 'react';
+import ReactModal from 'react-modal';
+import NewPositionForm from './NewPositionForm';
 
 export default function NewPositionModal(props) {
 
-  ReactModal.setAppElement("#root");
+  ReactModal.setAppElement('#root');
 
   return (
     <ReactModal
@@ -16,56 +15,56 @@ export default function NewPositionModal(props) {
       style={
         {
           overlay: {
-            position: "fixed",
+            position: 'fixed',
             top: 0,
             left: 0,
             right: 0,
             bottom: 0,
-            display: "flex",
-            justifyContent: "center",
-            paddingTop: "20%",
-            backgroundColor: "rgba(89, 89, 89, 0.75)",
+            display: 'flex',
+            justifyContent: 'center',
+            paddingTop: '20%',
+            backgroundColor: 'rgba(89, 89, 89, 0.75)'
           }, content: {
-            position: "absolute",
-            border: "1px solid #ccc",
-            background: "#fff",
-            overflow: "auto",
-            WebkitOverflowScrolling: "touch",
-            borderRadius: "4px",
-            outline: "none",
-            padding: "40px",
-          },
+            position: 'absolute',
+            border: '1px solid #ccc',
+            background: '#fff',
+            overflow: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            borderRadius: '4px',
+            outline: 'none',
+            padding: '40px'
+          }
         }
         /* Object indicating styles to be used for the modal.
            It has two keys, `overlay` and `content`.
            See the `Styles` section for more details. */}
 
       contentLabel={
-        "Example Modal"
+        'Example Modal'
         /* String indicating how the content container should be announced
            to screenreaders */}
 
       portalClassName={
-        "ReactModalPortal"
+        'ReactModalPortal'
         /* String className to be applied to the portal.
            See the `Styles` section for more details. */}
 
       overlayClassName={
-        "ReactModal__Overlay"
+        'ReactModal__Overlay'
         /* String className to be applied to the overlay.
            See the `Styles` section for more details. */}
 
       id={
-        "some-id"
+        'some-id'
         /* String id to be applied to the content div. */}
 
       className={
-        "ReactModal__Content"
+        'ReactModal__Content'
         /* String className to be applied to the modal content.
            See the `Styles` section for more details. */}
 
       bodyOpenClassName={
-        "ReactModal__Body--open"
+        'ReactModal__Body--open'
         /* String className to be applied to the modal ownerDocument.body
            (must be a constant string).
            This attribute when set as `null` doesn't add any class
@@ -73,7 +72,7 @@ export default function NewPositionModal(props) {
            See the `Styles` section for more details. */}
 
       htmlOpenClassName={
-        "ReactModal__Html--open"
+        'ReactModal__Html--open'
         /* String className to be applied to the modal ownerDocument.html
            (must be a constant string).
            This attribute is `null` by default.
@@ -103,7 +102,7 @@ export default function NewPositionModal(props) {
            that had focus prior to its display. */}
 
       role={
-        "dialog"
+        'dialog'
         /* String indicating the role of the modal, allowing the 'dialog' role
            to be applied if desired.
            This attribute is `dialog` by default. */}
@@ -120,17 +119,17 @@ export default function NewPositionModal(props) {
 
       aria={
         {
-          labelledby: "heading",
-          describedby: "full_description",
+          labelledby: 'heading',
+          describedby: 'full_description'
         }
         /* Additional aria attributes (optional). */}
 
       data={
-        { background: "green" }
+        { background: 'green' }
         /* Additional data attributes (optional). */}
 
       testId={
-        ""
+        ''
         /* String testId that renders a data-testid attribute in the DOM,
           useful for testing. */}
 
