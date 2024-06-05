@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import DefiniedSelector from './DefiniedSelector';
 import { useContext } from 'react';
-import { CostsDispatchContext } from '../../contexts/CostsContext';
+import { GlobalDispatchContext } from '../../contexts/GlobalContext';
 
 export default function NewPositionForm() {
-  const { newCostDispatch } = useContext(CostsDispatchContext);
+  const { costDispatch } = useContext(GlobalDispatchContext);
 
   const [lastId, setLastId] = useState(1);
   const [month, setMonth] = useState(1);
@@ -15,7 +15,7 @@ export default function NewPositionForm() {
     e.preventDefault();
     setLastId((prevState) => prevState + 1);
 
-    newCostDispatch({
+    costDispatch({
       type: 'added',
       id: lastId,
       month: +month,

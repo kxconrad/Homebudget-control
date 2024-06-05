@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { baseData } from '../../utils/data/baseData';
-import { monthHandler } from '../../utils/monthHandler';
-import { CostsContext } from '../../contexts/CostsContext';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 export default function MonthSelect() {
   const { months } = baseData;
-  const { selectedMonth } = useContext(CostsContext);
+  const { selectedMonth, setSelectedMonth } = useContext(GlobalContext);
+
+  const handleChangeMonth = (e) => {
+    setSelectedMonth(+e.target.value);
+  };
 
   return (<div>
-    <select className="select" onChange={monthHandler}>
+    <select className="select" onChange={handleChangeMonth} value={selectedMonth}>
       {months.map((item, index) => <option key={index} value={item.value}>{item.name}</option>)}
     </select>
     <div>selected month: {selectedMonth}</div>

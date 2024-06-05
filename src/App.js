@@ -1,14 +1,14 @@
 import Navigation from './components/Navigation';
 import { routing } from './utils/data/routing';
-import { CostsProvider } from './contexts/CostsProvider';
+import { GlobalProvider } from './contexts/GlobalProvider';
 
 function App() {
   return (
-    <CostsProvider>
+    <GlobalProvider>
       <div className="min-h-screen flex flex-col items-center">
         <Navigation routing={routing} />
       </div>
-    </CostsProvider>
+    </GlobalProvider>
   );
 }
 
