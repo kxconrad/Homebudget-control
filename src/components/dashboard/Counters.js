@@ -7,9 +7,13 @@ export default function Counters() {
   const filteredCosts = allCosts.filter((cost) => cost.month === selectedMonth);
 
   const countersData = {
-    length: filteredCosts.length ? filteredCosts.length : 0
-    // moneySpent: filteredCosts.
+    length: filteredCosts.length ? filteredCosts.length : 0,
+    moneySpent: filteredCosts.length ? filteredCosts.reduce((total, current) => total + current.value, 0) : 0,
+    currency: 'zł'
+
   };
+
+  console.log('filteredCosts: ', filteredCosts);
 
   return (<div className="w-full mt-5 flex justify-around flex-wrap">
     <div className="flex flex-col items-center">
@@ -19,6 +23,7 @@ export default function Counters() {
           {
             countersData.length
           }
+          
         </span>
       </div>
     </div>
@@ -26,7 +31,11 @@ export default function Counters() {
     <div className="flex flex-col items-center">
       <h1>Wydane:</h1>
       <div className="h-[150px] w-[150px] bg-slate-300 rounded-full flex justify-center items-center">
-        <span className="text-3xl">0</span>
+        <span className="text-3xl">
+          {
+            countersData.moneySpent + countersData.currency
+          }
+          </span>
       </div>
     </div>
 

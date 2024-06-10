@@ -38,7 +38,7 @@ export default function NewPositionForm() {
           </div>
           <div className="flex flex-col mt-5">
             <label className="label">Wprowadź kwotę</label>
-            <input className="input" type="text" name="cost" value={value}
+            <input className="input" type="number" name="cost" value={value}
                    onChange={e => setValue(e.target.value)} />
           </div>
           <div className="flex flex-col mt-5">
