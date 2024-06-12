@@ -6,5 +6,6 @@ in a clear way
 Technologies:
 
 - React 18
+- TypeScript
 - create-react-app
 - TailwindCSS
