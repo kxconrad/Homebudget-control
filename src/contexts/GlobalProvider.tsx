@@ -2,12 +2,18 @@ import React, { useReducer, useState } from 'react';
 import { costReducer } from '../reducers/costReducer';
 import { GlobalContext, GlobalDispatchContext } from './GlobalContext';
 
-export function GlobalProvider({ children }) {
+interface GlobalProviderProps {
+  children: React.ReactNode;
+}
+
+export function GlobalProvider({ children }: GlobalProviderProps) {
+
   const baseState = {
     selectedMonth: 1,
     allCosts: [],
     configPerMonth: []
   };
+
   const [allCosts, costDispatch] = useReducer(costReducer, baseState.allCosts);
   const [selectedMonth, setSelectedMonth] = useState(baseState.selectedMonth);
 
@@ -23,7 +29,6 @@ export function GlobalProvider({ children }) {
       }}>
         {children}
       </GlobalDispatchContext.Provider>
-
     </GlobalContext.Provider>
   );
 }

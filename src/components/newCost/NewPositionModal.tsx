@@ -1,8 +1,13 @@
 import React from 'react';
-import ReactModal from 'react-modal';
 import NewPositionForm from './NewPositionForm';
+import ReactModal from 'react-modal';
 
-export default function NewPositionModal(props) {
+interface PropsTypes {
+  isOpen: boolean;
+  handleClose: () => void;
+}
+
+export default function NewPositionModal(props: PropsTypes) {
 
   ReactModal.setAppElement('#root');
 

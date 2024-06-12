@@ -1,3 +1,4 @@
+import React from 'react';
 import Navigation from './components/Navigation';
 import { routing } from './utils/data/routing';
 import { GlobalProvider } from './contexts/GlobalProvider';

@@ -1,9 +1,15 @@
 import React from 'react';
 import { baseData } from '../../utils/data/baseData';
 
-export default function DefiniedSelector({ dataType, stateValue, stateOnChange = null }) {
+interface DefiniedSelectorProps {
+  dataType: string;
+  stateValue: string | number;
+  stateOnChange: any;
+}
 
-  const getData = (dataType) => {
+export default function DefiniedSelector({ dataType, stateValue, stateOnChange = null }: DefiniedSelectorProps) {
+
+  const getData = (dataType: string) => {
     switch (dataType) {
       case 'months':
         return baseData.months;
