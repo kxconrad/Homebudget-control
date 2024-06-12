@@ -4,17 +4,15 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 export default function Counters() {
   const { allCosts, selectedMonth } = useContext(GlobalContext);
 
-  const filteredCosts = allCosts.filter((cost) => cost.month === selectedMonth);
+  const filteredCosts = allCosts.filter((cost: any) => cost.month === selectedMonth);
 
   const countersData = {
     length: filteredCosts.length ? filteredCosts.length : 0,
-    moneySpent: filteredCosts.length ? filteredCosts.reduce((total, current) => total + current.value, 0) : 0,
+    moneySpent: filteredCosts.length ? filteredCosts.reduce((total: number, current: any) => total + current.value, 0) : 0,
     currency: 'zł'
 
   };
-
-  console.log('filteredCosts: ', filteredCosts);
-
+  
   return (<div className="w-full mt-5 flex justify-around flex-wrap">
     <div className="flex flex-col items-center">
       <h1>Liczba kosztów:</h1>

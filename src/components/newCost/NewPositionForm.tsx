@@ -10,8 +10,8 @@ export default function NewPositionForm() {
   const [month, setMonth] = useState(1);
   const [category, setCategory] = useState('home');
   const [value, setValue] = useState('');
-
-  const handleFormSubmit = (e) => {
+  
+  const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLastId((prevState) => prevState + 1);
 

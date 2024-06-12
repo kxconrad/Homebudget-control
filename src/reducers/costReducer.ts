@@ -1,4 +1,6 @@
-export const costReducer = (allCosts, action) => {
+import CostActionInterface from '../components/interfaces/CostActionInterface';
+
+export const costReducer = (allCosts: Array<object>, action: CostActionInterface) => {
   switch (action.type) {
     case 'added': {
       const newState = [

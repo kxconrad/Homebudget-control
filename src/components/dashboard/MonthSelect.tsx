@@ -6,8 +6,8 @@ export default function MonthSelect() {
   const { months } = baseData;
   const { selectedMonth, setSelectedMonth } = useContext(GlobalContext);
 
-  const handleChangeMonth = (e) => {
-    setSelectedMonth(+e.target.value);
+  const handleChangeMonth = (e: React.ChangeEvent) => {
+    setSelectedMonth(+(e.target as HTMLSelectElement).value);
   };
 
   return (<div>

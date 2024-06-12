@@ -5,7 +5,16 @@ import Details from './details/Details';
 import NewPositionModal from './newCost/NewPositionModal';
 import MonthSettings from './settings/MonthSettings';
 
-export default function Navigation({ routing }) {
+interface NavigationProps {
+  routing: Array<{
+    menu: boolean;
+    id: number;
+    path: string;
+    title: string;
+  }>;
+}
+
+export default function Navigation({ routing }: NavigationProps) {
 
   const [showModal, setShowModal] = useState(false);
 
