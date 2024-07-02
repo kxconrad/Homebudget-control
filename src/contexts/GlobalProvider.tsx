@@ -6,7 +6,7 @@ interface GlobalProviderProps {
   children: React.ReactNode;
 }
 
-export function GlobalProvider({ children }: GlobalProviderProps) {
+export function GlobalProvider(props: GlobalProviderProps) {
 
   const baseState = {
     selectedMonth: 1,
@@ -27,7 +27,7 @@ export function GlobalProvider({ children }: GlobalProviderProps) {
       <GlobalDispatchContext.Provider value={{
         costDispatch: costDispatch
       }}>
-        {children}
+        {props.children}
       </GlobalDispatchContext.Provider>
     </GlobalContext.Provider>
   );

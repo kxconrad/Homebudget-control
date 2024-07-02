@@ -12,7 +12,7 @@ export default function Counters() {
     currency: 'zł'
 
   };
-  
+
   return (<div className="w-full mt-5 flex justify-around flex-wrap">
     <div className="flex flex-col items-center">
       <h1>Liczba kosztów:</h1>

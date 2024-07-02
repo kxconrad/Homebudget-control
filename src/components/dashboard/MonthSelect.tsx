@@ -12,7 +12,12 @@ export default function MonthSelect() {
 
   return (<div>
     <select className="select" onChange={handleChangeMonth} value={selectedMonth}>
-      {months.map((item, index) => <option key={index} value={item.value}>{item.name}</option>)}
+      {
+        months.map((item, index) =>
+          <option key={index} value={item.value}>
+            {item.name}
+          </option>
+        )}
     </select>
     <div>selected month: {selectedMonth}</div>
   </div>);

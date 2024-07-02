@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Dashboard from './dashboard/Dashboard';
 import Details from './details/Details';
 import NewPositionModal from './newCost/NewPositionModal';
-import MonthSettings from './settings/MonthSettings';
+import SettingsPanel from './settings/SettingsPanel';
+import NotFound from './NotFound';
 
 interface NavigationProps {
   routing: Array<{
@@ -14,7 +15,7 @@ interface NavigationProps {
   }>;
 }
 
-export default function Navigation({ routing }: NavigationProps) {
+export default function Navigation(props: NavigationProps) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -33,7 +34,7 @@ export default function Navigation({ routing }: NavigationProps) {
        border-b border-slate-400 relative">
       <ul className="flex gap-10 my-5 justify-center">
         {
-          routing.map(value =>
+          props.routing.map(value =>
             value.menu ?
               <li key={value.id}
                   className="hover:text-black">
@@ -53,7 +54,7 @@ export default function Navigation({ routing }: NavigationProps) {
         <NewPositionModal isOpen={showModal} handleClose={closeOpenNewPositionModal} />
       </div>
 
-      <Link to={routing[2].path}>
+      <Link to={props.routing[2].path}>
         <div className="settings-icon absolute h-full top-0 right-[20px] items-center flex">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                stroke="currentColor"
@@ -82,9 +83,19 @@ export default function Navigation({ routing }: NavigationProps) {
       <Route
         path="/settings"
         element={
-          <MonthSettings />
+          <SettingsPanel />
         }
       ></Route>
+      <Route
+        path="/settings/:settingsSubmenu"
+        element={
+          <SettingsPanel />
+        }></Route>
+      <Route
+        path="*"
+        element={
+          <NotFound />
+        }></Route>
     </Routes>
   </Router>);
 }

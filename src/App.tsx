@@ -3,7 +3,7 @@ import Navigation from './components/Navigation';
 import { routing } from './utils/data/routing';
 import { GlobalProvider } from './contexts/GlobalProvider';
 
-function App() {
+const App: React.FC = () => {
   return (
     <GlobalProvider>
       <div className="min-h-screen flex flex-col items-center">
@@ -11,6 +11,6 @@ function App() {
       </div>
     </GlobalProvider>
   );
-}
+};
 
 export default App;
